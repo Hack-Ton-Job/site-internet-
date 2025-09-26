@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HackTonJob – Formation inclusive & Matching emploi</title>
+  <meta name="description" content="HackTonJob : formations inclusives et matching emploi. Découvrez nos offres et laissez vos coordonnées pour être recontacté·e." />
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --txt:#ffffff;
+      --muted:#c9c9d6;
+      --accent1:#7aa7ff;
+      --accent2:#9b5cff;
+      --shadow:0 6px 16px rgba(0,0,0,.5);
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; color:var(--txt); background:var(--bg)}
+    .wrap{max-width:900px;margin:auto;padding:0 20px}
+
+    header{padding:54px 0 48px; text-align:center}
+    h1{font-size:clamp(28px,4vw,44px); margin:16px 0; background:linear-gradient(90deg,var(--accent2),var(--accent1)); -webkit-background-clip:text; color:transparent}
+    h2{font-size:28px; margin-bottom:16px; color:var(--accent2)}
+    p{color:var(--muted); margin:0 0 10px}
+
+    .cta{display:inline-block;margin:16px 8px; padding:14px 28px; border-radius:999px; background:linear-gradient(135deg,var(--accent2),var(--accent1)); color:#fff; font-weight:700; text-decoration:none; box-shadow:var(--shadow); transition:transform .2s ease, box-shadow .2s ease}
+    .cta:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,0,0,.6)}
+
+    section{padding:56px 0; text-align:center}
+    .divider{height:3px; width:100%; background:linear-gradient(90deg,var(--accent2),var(--accent1)); opacity:.6; border-radius:999px; margin:6px 0 36px}
+
+    footer{text-align:center; color:var(--muted); padding:40px 0; font-size:14px}
+    ul{list-style:none; padding:0; margin:20px 0}
+    ul li{margin:12px 0; color:var(--txt)}
+
+    form{margin:30px auto 0; display:flex; flex-wrap:wrap; gap:12px; justify-content:center; max-width:720px}
+    input[type="email"], input[type="tel"], select{flex:1; min-width:220px; padding:14px; border-radius:8px; border:1px solid #444; font-size:16px; background:#1a1a1a; color:#fff}
+    button{padding:14px 24px; border:none; border-radius:8px; background:linear-gradient(135deg,var(--accent2),var(--accent1)); font-weight:700; cursor:pointer; color:#fff; transition:transform .2s ease, box-shadow .2s ease}
+    button:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,0,0,.6)}
+
+    .reveal{opacity:0; transform:translateY(14px); animation:reveal .7s ease forwards; animation-delay:var(--d,0s)}
+    @keyframes reveal{to{opacity:1; transform:none}}
+
+    .sticky-cta{position:fixed; left:16px; right:16px; bottom:16px; display:none; justify-content:center; gap:10px; z-index:50}
+    .sticky-cta a{flex:1; text-align:center}
+    @media (max-width: 768px){ .sticky-cta{display:flex} }
+
+    .stats{display:grid; grid-template-columns:1fr; gap:16px; margin:18px 0 8px}
+    .stat-card{position:relative; padding:18px 16px; border-radius:16px; background:rgba(255,255,255,.04); border:1px solid rgba(154,92,255,.35); backdrop-filter:blur(6px)}
+    .stat-card::after{content:""; position:absolute; inset:0; border-radius:16px; padding:1px; background:linear-gradient(135deg,var(--accent2),var(--accent1)); -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude}
+    .kpi{font-size:32px; font-weight:800; line-height:1; margin-bottom:6px; background:linear-gradient(90deg,var(--accent2),var(--accent1)); -webkit-background-clip:text; color:transparent}
+    .kpi-label{color:var(--muted); font-size:14px}
+    @media(min-width:768px){ .stats{grid-template-columns:repeat(3,1fr);} }
+
+    .section-card{background:rgba(255,255,255,.04); border:1px solid rgba(155,92,255,.28); border-radius:16px; padding:22px; box-shadow:0 10px 24px rgba(0,0,0,.35); text-align:left}
+    .section-card h3{margin:0 0 10px; font-size:22px; color:var(--accent2)}
+    .section-card ul{margin:10px 0 0 0}
+
+    .check{display:flex; align-items:flex-start; gap:10px}
+    .check::before{content:"✔"; display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:8px; background:linear-gradient(135deg,var(--accent2),var(--accent1)); color:#000; font-weight:900}
+
+    .pill{display:inline-block; padding:6px 12px; border-radius:999px; font-weight:600; font-size:12px; letter-spacing:.2px; color:#000; background:linear-gradient(90deg,var(--accent2),var(--accent1)); margin-bottom:10px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap reveal" style="--d:.05s">
+      <div class="logo">
+        <!-- Logo intégré en SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="140" height="140">
+          <circle cx="100" cy="100" r="80" fill="#1a1a1a" stroke="#9b5cff" stroke-width="10"/>
+          <text x="100" y="115" text-anchor="middle" font-size="48" font-family="Montserrat, sans-serif" font-weight="700" fill="white">HTJ</text>
+        </svg>
+        <div style="margin-top:8px; font-size:20px; font-weight:700; color:white">Hack Ton Job</div>
+      </div>
+      <span class="pill">Programme hybride & inclusif</span>
+      <h1>Transformez vos obligations OETH en atout RSE</h1>
+      <p>Recrutement inclusif, accompagnement humain et talents formés aux outils numériques modernes.</p>
+      <a href="#contact" class="cta">Être recontacté·e</a>
+    </div>
+  </header>
+    
+  <main class="wrap">
+    <!-- MISSION -->
+    <section class="reveal" style="--d:.1s">
+      <h2>Notre mission</h2>
+      <div class="divider"></div>
+      <p>Rendre l’emploi plus inclusif et durable : nous formons les personnes en situation de handicap et facilitons leur insertion via un matching simple et efficace avec les besoins des entreprises.</p>
+    </section>
+
+    <!-- ENTREPRISES -->
+    <section class="reveal" style="--d:.2s">
+      <div class="section-card">
+        <h3>Pour les entreprises</h3>
+        <ul>
+          <li class="check">OETH → atout RSE : collaborateurs préparés, contribution Agefiph optimisée</li>
+          <li class="check">Indicateurs & rapports prêts pour vos bilans RSE</li>
+          <li class="check">Communication valorisante : témoignages, cas clients, événements</li>
+          <li class="check">Coaching d’intégration : manager & talent</li>
+        </ul>
+        <div style="margin-top:14px; text-align:right">
+          <a href="#contact" class="cta">Être recontacté·e</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPRENANTS -->
+    <section class="reveal" style="--d:.3s">
+      <div class="section-card">
+        <h3>Pour les apprenants</h3>
+        <ul>
+          <li class="check">Parcours <strong>HackRise</strong> (court) & <strong>Hackcess</strong> (long) accessibles</li>
+          <li class="check">Compétences IA, No-code, gestion de projet + outils pros</li>
+          <li class="check">Mises en situation réelles & mise en relation directe</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BENEFICES -->
+    <section class="reveal" style="--d:.4s">
+      <div class="section-card">
+        <h3>Ce que vous gagnez</h3>
+        <ul>
+          <li class="check">Formations inclusives et modernes</li>
+          <li class="check">Matching efficace entreprises ↔ talents</li>
+          <li class="check">Accompagnement humain jusqu’à l’emploi durable</li>
+          <li class="check">Impact mesurable pour l’entreprise et l’apprenant</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PREUVES SOCIALES -->
+    <section class="reveal" style="--d:.55s">
+      <h2>Preuves sociales</h2>
+      <div class="stats">
+        <div class="stat-card">
+          <div class="kpi">+70%</div>
+          <div class="kpi-label">Taux visé d’insertion professionnelle durable</div>
+        </div>
+        <div class="stat-card">
+          <div class="kpi">OETH &amp; RSE</div>
+          <div class="kpi-label">Conformité &amp; valorisation de l’impact</div>
+        </div>
+        <div class="stat-card">
+          <div class="kpi">4,8/5</div>
+          <div class="kpi-label">Satisfaction moyenne des apprenants</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal" style="--d:.6s">
+      <h2>Laissez-nous vos coordonnées</h2>
+      <div class="divider" style="opacity:.4"></div>
+      <form action="https://formsubmit.co/contact@hacktonjob.com" method="POST" id="lead-form">
+        <input type="email" name="email" placeholder="Votre email" aria-label="Votre email" required />
+        <input type="tel" name="phone" placeholder="Votre téléphone (facultatif)" aria-label="Votre téléphone" />
+        <select name="profil" aria-label="Vous êtes">
+          <option value="">Je suis… (optionnel)</option>
+          <option>Entreprise</option>
+          <option>Apprenant·e / PSH</option>
+          <option>Prescripteur·rice</option>
+        </select>
+        <button type="submit">Envoyer</button>
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_subject" value="Nouveau lead – HackTonJob" />
+        <input type="hidden" name="_next" id="next-url" value="#merci" />
+        <input type="hidden" name="_template" value="table" />
+      </form>
+      <p>Nous vous recontacterons rapidement pour vous donner plus d’informations.</p>
+      <p style="font-size:12px; color:var(--muted)">En envoyant ce formulaire, vous acceptez d’être contacté·e par HackTonJob à propos de nos offres et formations. Vos données ne sont pas revendues.</p>
+    </section>
+  </main>
+
+  <!-- CTA collant mobile -->
+  <div class="sticky-cta">
+    <a href="#contact" class="cta" aria-label="Être recontacté·e (barre fixe)">Être recontacté·e</a>
+  </div>
+
+  <div id="merci" style="display:none; position:sticky; bottom:0; left:0; right:0; background:linear-gradient(90deg,var(--accent2),var(--accent1)); color:#fff; padding:12px 16px; text-align:center; font-weight:700">Merci ! Votre demande a bien été envoyée. Nous vous recontactons très vite.</div>
+
+  <script>
+    (function(){
+      var form = document.getElementById('lead-form');
+      var next = document.getElementById('next-url');
+      if(form && next){
+        form.addEventListener('submit', function(){
+          try{ next.value = window.location.href.split('#')[0] + '#merci'; }catch(e){}
+        });
+      }
+      if(window.location.hash === '#merci'){
+        var bar = document.getElementById('merci');
+        if(bar){ bar.style.display = 'block'; }
+      }
+    })();
+  </script>
+
+  <footer>
+    <p>© HackTonJob – Inclusion & Innovation</p>
+  </footer>
+</body>
+</html>
